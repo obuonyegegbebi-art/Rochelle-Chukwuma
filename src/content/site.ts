@@ -58,14 +58,14 @@ export const offerings: Offering[] = [
   {
     title: "Yoga",
     body: "Flowing, breath-led classes that build strength, ease and focus.",
-    image: "/images/studio-class.jpg",
+    image: "/images/ig/outdoor-bridge.jpg",
     href: "/classes#yoga",
-    meta: "Group & private",
+    meta: "Indoors & outdoors",
   },
   {
     title: "Pilates",
-    body: "Mat Pilates for core strength, posture and moving with control.",
-    image: "/images/core-strength.jpg",
+    body: "Mat and reformer Pilates for core strength, posture and control.",
+    image: "/images/ig/reformer-pilates.jpg",
     href: "/classes#pilates",
     meta: "Group & private",
   },
@@ -86,14 +86,14 @@ export const offerings: Offering[] = [
   {
     title: "Curated Experiences",
     body: "Wellness gatherings for birthdays, celebrations and friends.",
-    image: "/images/beach-flow.jpg",
+    image: "/images/ig/birthday.jpg",
     href: "/classes#experiences",
     meta: "Tailor-made",
   },
   {
     title: "Corporate Wellness",
-    body: "Yoga, Pilates and sound sessions to help teams reset and connect.",
-    image: "/images/seated-practice.jpg",
+    body: "Sound healing, yoga, Pilates and retreat days — a real reset for teams.",
+    image: "/images/ig/dear-hr.jpg",
     href: "/classes#corporate",
     meta: "For teams",
   },
@@ -102,36 +102,62 @@ export const offerings: Offering[] = [
 export const feature = {
   kicker: "Watch & practise",
   title: "Press play. Breathe out.",
-  body: "Moments from Ro's classes, sound baths and gatherings — so you can feel the experience before you join.",
+  body: "Moments from Ro's classes, sound baths and gatherings — under the trees, in the studio and beyond Abuja.",
   video: { src: "", poster: "/images/lake-stillness.jpg" },
 };
 
 export type VideoItem = {
   title: string;
+  /** Small label under the title, e.g. "Reel" or "04:30" */
   length: string;
   poster: string;
   /** Local file in /public/media, e.g. "/media/morning-flow.mp4" */
   src?: string;
-  /** Or a YouTube/Vimeo embed URL, e.g. "https://www.youtube.com/embed/VIDEO_ID" */
+  /** Or an embed URL — YouTube, Vimeo or an Instagram reel ("https://www.instagram.com/reel/CODE/embed/") */
   embed?: string;
+  /** Portrait player, for Instagram reels */
+  vertical?: boolean;
 };
 
 export const videos: VideoItem[] = [
   {
-    title: "Morning yoga flow",
-    length: "Video",
-    poster: "/images/mobility.jpg",
+    title: "Hi, I'm Ro",
+    length: "Reel",
+    poster: "/images/ig/meet-ro.jpg",
+    embed: "https://www.instagram.com/reel/Dd0taSGI4Oc/embed/",
+    vertical: true,
   },
   {
-    title: "Inside a sound bath",
-    length: "Video",
-    poster: "/images/meditation-sunrise.jpg",
+    title: "Yoga under the trees",
+    length: "Reel",
+    poster: "/images/ig/outdoor-group.jpg",
+    embed: "https://www.instagram.com/reel/DeY3CZnuRwz/embed/",
+    vertical: true,
   },
   {
-    title: "Pilates core basics",
-    length: "Video",
-    poster: "/images/core-strength.jpg",
+    title: "W is for women & wellbeing",
+    length: "Reel",
+    poster: "/images/ig/women-wellbeing.jpg",
+    embed: "https://www.instagram.com/reel/Dd3-3PVowuQ/embed/",
+    vertical: true,
   },
+  {
+    title: "Teaching yoga in Taraba",
+    length: "Reel",
+    poster: "/images/ig/taraba.jpg",
+    embed: "https://www.instagram.com/reel/Ddi91AiIM1N/embed/",
+    vertical: true,
+  },
+];
+
+/** Recent Instagram posts shown in the "From Instagram" grid. */
+export const instagramPosts = [
+  { image: "/images/ig/dear-hr.jpg", href: "https://www.instagram.com/p/Dd-0KX9okXs/", alt: "Dear HR — not another team-building day" },
+  { image: "/images/ig/outdoor-bridge.jpg", href: "https://www.instagram.com/p/DdTDFthCEqc/", alt: "Outdoor yoga on the grass" },
+  { image: "/images/ig/studio.jpg", href: "https://www.instagram.com/p/DdI4U4_un0T/", alt: "The studio, mats laid out" },
+  { image: "/images/ig/reformer-pilates.jpg", href: "https://www.instagram.com/reel/DdlaeztO5-I/", alt: "Reformer Pilates" },
+  { image: "/images/ig/birthday.jpg", href: "https://www.instagram.com/reel/DdhE_VJoKtN/", alt: "A birthday wellness gathering" },
+  { image: "/images/ig/wellness-basket.jpg", href: "https://www.instagram.com/p/DdofDWQiJSv/", alt: "Wellness is balance, peace, clarity" },
 ];
 
 export const testimonial = {
@@ -156,13 +182,13 @@ export const cta = {
 
 export const about = {
   title: ["Hi, I'm", "Ro."],
-  lead: "I'm Rochelle Chukwuma — a wellness experience curator in Abuja. I design experiences that connect people.",
+  lead: "I'm Rochelle Chukwuma — a wellbeing facilitator in Abuja. I work at the intersection of movement, sound and nature.",
   paragraphs: [
     "Wellbeing With Ro brings together yoga, Pilates and sound bath into experiences that help you slow down, move well and feel at home in your body.",
     "From group classes and private sessions to birthday gatherings and team wellness days, every experience is thoughtfully designed — warm, welcoming and grounded.",
     "Whether you're stepping onto a mat for the first time or returning after a long break, you are welcome exactly as you are.",
   ],
-  portrait: "/images/meditation-sunrise.jpg",
+  portrait: "/images/ig/meet-ro.jpg",
   wide: "/images/retreat-canyon.jpg",
   stats: [
     { value: "Yoga", label: "Flow & breath" },
@@ -184,14 +210,14 @@ export const classes: ClassDetail[] = [
     id: "yoga",
     title: "Yoga",
     body: "Breath-led yoga that builds strength and flexibility, then winds down into a long, grounding rest.",
-    image: "/images/studio-class.jpg",
-    details: ["All levels", "Group & private", "Abuja"],
+    image: "/images/ig/outdoor-bridge.jpg",
+    details: ["All levels", "Indoors & outdoors", "Abuja"],
   },
   {
     id: "pilates",
     title: "Pilates",
-    body: "Mat Pilates focused on core strength, posture and controlled, mindful movement.",
-    image: "/images/core-strength.jpg",
+    body: "Mat and reformer Pilates focused on core strength, posture and controlled, mindful movement.",
+    image: "/images/ig/reformer-pilates.jpg",
     details: ["All levels", "Group & private", "Abuja"],
   },
   {
@@ -212,14 +238,14 @@ export const classes: ClassDetail[] = [
     id: "experiences",
     title: "Curated Experiences",
     body: "Wellness gatherings for birthdays, celebrations and friends — movement, sound and connection, designed for your occasion.",
-    image: "/images/beach-flow.jpg",
+    image: "/images/ig/birthday.jpg",
     details: ["Birthdays & celebrations", "Tailor-made", "Enquire for dates"],
   },
   {
     id: "corporate",
     title: "Corporate Wellness",
-    body: "Sessions for teams and workplaces to de-stress, reset and connect — on site or at a venue of your choice.",
-    image: "/images/seated-practice.jpg",
+    body: "Not another team-building day. Sound healing, yoga & Pilates and retreat days that give your people a real reset.",
+    image: "/images/ig/dear-hr.jpg",
     details: ["For teams", "On site or venue", "Enquire for pricing"],
   },
 ];

@@ -5,6 +5,7 @@ import VideoGallery from "@/components/VideoGallery";
 import {
   cta,
   feature,
+  instagramPosts,
   hero,
   intro,
   offerings,
@@ -167,6 +168,39 @@ export default function Home() {
               {testimonial.name} · <span>{testimonial.detail}</span>
             </footer>
           </blockquote>
+        </div>
+      </section>
+
+      {/* From Instagram */}
+      <section className="section insta">
+        <div className="container">
+          <div className="section-head reveal">
+            <div>
+              <span className="kicker">From Instagram</span>
+              <h2 className="display-lg">
+                <a href={site.instagram} target="_blank" rel="noreferrer">
+                  {site.instagramHandle}
+                </a>
+              </h2>
+            </div>
+            <a href={site.instagram} target="_blank" rel="noreferrer" className="btn btn-ghost">
+              Follow on Instagram
+            </a>
+          </div>
+          <div className="insta-grid">
+            {instagramPosts.map((p, i) => (
+              <a
+                key={p.href}
+                href={p.href}
+                target="_blank"
+                rel="noreferrer"
+                className="insta-tile reveal"
+                style={{ "--delay": `${i * 80}ms` } as React.CSSProperties}
+              >
+                <Image src={p.image} alt={p.alt} fill sizes="(max-width: 700px) 50vw, 17vw" />
+              </a>
+            ))}
+          </div>
         </div>
       </section>
 

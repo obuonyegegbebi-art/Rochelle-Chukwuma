@@ -42,7 +42,7 @@ export default function VideoGallery({ videos }: { videos: VideoItem[] }) {
                 src={v.poster}
                 alt=""
                 fill
-                sizes={i === 0 ? "(max-width: 800px) 100vw, 58vw" : "(max-width: 800px) 100vw, 40vw"}
+                sizes="(max-width: 800px) 50vw, 25vw"
               />
             </div>
             <span className="play">
@@ -67,12 +67,15 @@ export default function VideoGallery({ videos }: { videos: VideoItem[] }) {
           <button className="modal-close" aria-label="Close video" onClick={() => setActive(null)} autoFocus>
             ×
           </button>
-          <div className="modal-frame" onClick={(e) => e.stopPropagation()}>
+          <div
+            className={`modal-frame ${active.vertical ? "vertical" : ""}`}
+            onClick={(e) => e.stopPropagation()}
+          >
             {active.embed ? (
               <iframe
                 src={active.embed}
                 title={active.title}
-                allow="autoplay; encrypted-media; picture-in-picture"
+                allow="autoplay; encrypted-media; picture-in-picture; clipboard-write"
                 allowFullScreen
               />
             ) : active.src ? (

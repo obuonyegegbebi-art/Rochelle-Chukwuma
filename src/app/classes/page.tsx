@@ -45,7 +45,7 @@ export default function ClassesPage() {
                 </Link>
               </div>
               <div className="class-image">
-                <Image src={c.image} alt={c.title} width={800} height={600} sizes="(max-width: 860px) 100vw, 40vw" />
+                <Image src={c.image} alt={c.title} width={800} height={1000} sizes="(max-width: 860px) 100vw, 40vw" />
               </div>
             </article>
           ))}
