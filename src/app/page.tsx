@@ -10,6 +10,7 @@ import {
   offerings,
   pillars,
   testimonial,
+  site,
   videos,
 } from "@/content/site";
 
@@ -64,13 +65,13 @@ export default function Home() {
         <div className="container">
           <div className="section-head reveal">
             <div>
-              <span className="kicker">Ways to practise</span>
+              <span className="kicker">Experiences</span>
               <h2 className="display-lg">
-                Find your <span className="italic">flow</span>
+                Ways to <span className="italic">feel well</span>
               </h2>
             </div>
             <Link href="/classes" className="text-link">
-              All classes →
+              All experiences →
             </Link>
           </div>
           <div className="card-grid">
@@ -114,13 +115,13 @@ export default function Home() {
         <div className="container">
           <div className="section-head reveal">
             <div>
-              <span className="kicker">Journal</span>
+              <span className="kicker">Watch</span>
               <h2 className="display-lg">
                 Practise <span className="italic">anywhere</span>
               </h2>
             </div>
-            <a href="https://youtube.com/" target="_blank" rel="noreferrer" className="text-link">
-              More on YouTube →
+            <a href={site.instagram} target="_blank" rel="noreferrer" className="text-link">
+              More on Instagram →
             </a>
           </div>
           <VideoGallery videos={videos} />

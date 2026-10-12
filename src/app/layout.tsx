@@ -25,7 +25,7 @@ const siteUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${site.name} — Yoga, Breathwork & Mindful Movement`,
+    default: `${site.name} — Yoga, Pilates & Sound Bath in Abuja`,
     template: `%s · ${site.name}`,
   },
   description: site.description,

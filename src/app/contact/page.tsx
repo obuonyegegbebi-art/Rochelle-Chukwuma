@@ -4,7 +4,7 @@ import { site } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Contact & Booking",
-  description: `Book a class or private session with ${site.name}.`,
+  description: `Book a class, private session or wellness experience with ${site.name}.`,
 };
 
 export default function ContactPage() {
@@ -18,7 +18,7 @@ export default function ContactPage() {
             <span className="line">together.</span>
           </h1>
           <p className="lead reveal">
-            Book a class, ask about private sessions or retreats, or just say hello.
+            Book a class, plan a private session or wellness experience, or just say hello.
           </p>
         </div>
       </section>
@@ -42,11 +42,7 @@ export default function ContactPage() {
                 <dt>Follow</dt>
                 <dd>
                   <a href={site.instagram} target="_blank" rel="noreferrer">
-                    Instagram
-                  </a>
-                  {" · "}
-                  <a href={site.youtube} target="_blank" rel="noreferrer">
-                    YouTube
+                    {site.instagramHandle}
                   </a>
                 </dd>
               </div>

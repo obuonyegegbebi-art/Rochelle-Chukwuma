@@ -20,7 +20,7 @@ export default function ContactForm() {
       `Email: ${data.get("email")}`,
       `Phone: ${data.get("phone") || "—"}`,
       `Interested in: ${data.get("interest")}`,
-      `Preferred format: ${data.get("format")}`,
+      `Format: ${data.get("format")}`,
       "",
       String(data.get("message") ?? ""),
     ].join("\n");
@@ -52,16 +52,16 @@ export default function ContactForm() {
         </select>
       </div>
       <div className="field full">
-        <label htmlFor="format">Preferred format</label>
-        <select id="format" name="format" defaultValue="In person">
-          <option>In person</option>
-          <option>Online</option>
-          <option>Either</option>
+        <label htmlFor="format">Format</label>
+        <select id="format" name="format" defaultValue="Group class">
+          <option>Group class</option>
+          <option>Private (one-to-one)</option>
+          <option>Event or group booking</option>
         </select>
       </div>
       <div className="field full">
-        <label htmlFor="message">Tell Rochael a little about you</label>
-        <textarea id="message" name="message" placeholder="Experience, goals, injuries, availability…" />
+        <label htmlFor="message">Tell Ro a little about you</label>
+        <textarea id="message" name="message" placeholder="Experience, goals, occasion, group size, availability…" />
       </div>
       <div className="field full">
         <button type="submit" className="btn btn-clay">
@@ -71,7 +71,7 @@ export default function ContactForm() {
       <p className="form-note" aria-live="polite">
         {sent
           ? "Your email app should now be open with your message ready to send."
-          : "Rochael usually replies within two working days."}
+          : "Ro usually replies within two working days."}
       </p>
     </form>
   );

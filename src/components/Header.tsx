@@ -27,14 +27,13 @@ export default function Header() {
   }, [open]);
 
   const tone = !isHome ? "is-light" : scrolled ? "is-solid" : "";
-  const [first, ...rest] = site.name.split(" ");
 
   return (
     <>
       <header className={`header ${tone}`}>
         <div className="container header-inner">
           <Link href="/" className="brand" aria-label={`${site.name} — home`}>
-            {first} <span>{rest.join(" ")}</span>
+            {site.brand.lead} <span>{site.brand.accent}</span>
           </Link>
 
           <nav className="nav" aria-label="Main">

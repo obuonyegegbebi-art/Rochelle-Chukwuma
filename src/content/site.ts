@@ -8,40 +8,42 @@
  */
 
 export const site = {
-  name: "Rochael Chukwuma",
-  shortName: "Rochael",
-  tagline: "Move with intention. Live with ease.",
+  name: "Wellbeing With Ro",
+  /** Brand split for the logo: "Wellbeing" + italic "with Ro" */
+  brand: { lead: "Wellbeing", accent: "with Ro" },
+  founder: "Rochelle Chukwuma",
+  founderShort: "Ro",
+  tagline: "Wellness experiences that connect people.",
   description:
-    "Rochael Chukwuma — yoga, breathwork and mindful movement for a calmer body and a clearer mind. Group classes, private sessions and retreats.",
-  email: "hello@rochaelchukwuma.com",
-  location: "Studio & online",
-  instagram: "https://instagram.com/",
-  youtube: "https://youtube.com/",
-  tiktok: "https://tiktok.com/",
+    "Wellbeing With Ro by Rochelle Chukwuma — yoga, Pilates and sound bath experiences in Abuja. Group classes, private sessions and curated wellness events.",
+  email: "hello@wellbeingwithro.com",
+  location: "Abuja, Nigeria",
+  instagram: "https://www.instagram.com/wellbeingwithro",
+  instagramHandle: "@wellbeingwithro",
 };
 
 export const nav = [
   { label: "About", href: "/about" },
-  { label: "Classes", href: "/classes" },
-  { label: "Journal", href: "/#watch" },
+  { label: "Experiences", href: "/classes" },
+  { label: "Watch", href: "/#watch" },
   { label: "Contact", href: "/contact" },
 ];
 
 export const hero = {
-  eyebrow: "Yoga · Breathwork · Mindful movement",
+  eyebrow: "Yoga · Pilates · Sound bath — Abuja",
   title: ["Come home", "to your body."],
-  body: "Slow, strong and soulful practice with Rochael — for every body, at every stage.",
+  body: "Wellness experiences that connect you to your body, your breath and each other. Curated by Rochelle Chukwuma.",
   primary: { label: "Book a session", href: "/contact#book" },
-  secondary: { label: "Explore classes", href: "/classes" },
+  secondary: { label: "Explore experiences", href: "/classes" },
   video: { src: "", poster: "/images/hero-sunset.jpg" },
 };
 
 export const intro = {
-  kicker: "The practice",
+  kicker: "Wellbeing with Ro",
   statement:
-    "This isn't about touching your toes. It's about what you learn on the way down.",
-  body: "Rochael blends grounded vinyasa, restorative stillness and breath-led strength into sessions that leave you softer, stronger and more yourself. No perfect poses required — just a willingness to show up.",
-  link: { label: "Meet Rochael", href: "/about" },
+    "Wellness is better shared. I design experiences that bring people together — and back to themselves.",
+  body: "Through yoga, Pilates and sound bath, Ro creates warm, welcoming spaces in Abuja to move, breathe and slow down. No experience needed — just come as you are.",
+  link: { label: "Meet Ro", href: "/about" },
 };
 
 export type Offering = {
@@ -54,53 +56,53 @@ export type Offering = {
 
 export const offerings: Offering[] = [
   {
-    title: "Group Flow",
-    body: "Energising vinyasa classes that build heat, rhythm and community.",
+    title: "Yoga",
+    body: "Flowing, breath-led classes that build strength, ease and focus.",
     image: "/images/studio-class.jpg",
-    href: "/classes#group-flow",
-    meta: "60 min · All levels",
+    href: "/classes#yoga",
+    meta: "Group & private",
+  },
+  {
+    title: "Pilates",
+    body: "Mat Pilates for core strength, posture and moving with control.",
+    image: "/images/core-strength.jpg",
+    href: "/classes#pilates",
+    meta: "Group & private",
+  },
+  {
+    title: "Sound Bath",
+    body: "Lie back and let singing bowls guide you into deep rest.",
+    image: "/images/sound-bowl.jpg",
+    href: "/classes#sound-bath",
+    meta: "Deep relaxation",
   },
   {
     title: "Private Sessions",
-    body: "One-to-one practice shaped entirely around your body and goals.",
+    body: "One-to-one practice shaped entirely around you and your goals.",
     image: "/images/private-session.jpg",
     href: "/classes#private",
-    meta: "75 min · In person or online",
+    meta: "By appointment",
   },
   {
-    title: "Breath & Stillness",
-    body: "Guided breathwork and meditation to quiet a busy nervous system.",
+    title: "Curated Experiences",
+    body: "Wellness gatherings for birthdays, celebrations and friends.",
+    image: "/images/beach-flow.jpg",
+    href: "/classes#experiences",
+    meta: "Tailor-made",
+  },
+  {
+    title: "Corporate Wellness",
+    body: "Yoga, Pilates and sound sessions to help teams reset and connect.",
     image: "/images/seated-practice.jpg",
-    href: "/classes#breath",
-    meta: "45 min · Beginner friendly",
-  },
-  {
-    title: "Strength & Mobility",
-    body: "Functional, joint-friendly strength for a body that moves freely.",
-    image: "/images/core-strength.jpg",
-    href: "/classes#strength",
-    meta: "50 min · Intermediate",
-  },
-  {
-    title: "Sound & Restore",
-    body: "Restorative postures held with blankets, bolsters and singing bowls.",
-    image: "/images/sound-bowl.jpg",
-    href: "/classes#restore",
-    meta: "75 min · All levels",
-  },
-  {
-    title: "Retreats",
-    body: "Days away to reset — movement, nourishing food and open skies.",
-    image: "/images/retreat-canyon.jpg",
-    href: "/classes#retreats",
-    meta: "Seasonal · Limited spaces",
+    href: "/classes#corporate",
+    meta: "For teams",
   },
 ];
 
 export const feature = {
   kicker: "Watch & practise",
   title: "Press play. Breathe out.",
-  body: "Short flows, breath practices and moments from the studio — so you can practise with Rochael wherever you are.",
+  body: "Moments from Ro's classes, sound baths and gatherings — so you can feel the experience before you join.",
   video: { src: "", poster: "/images/lake-stillness.jpg" },
 };
 
@@ -116,56 +118,56 @@ export type VideoItem = {
 
 export const videos: VideoItem[] = [
   {
-    title: "10-minute morning flow",
-    length: "10:24",
-    poster: "/images/beach-flow.jpg",
+    title: "Morning yoga flow",
+    length: "Video",
+    poster: "/images/mobility.jpg",
   },
   {
-    title: "Box breathing for busy days",
-    length: "06:12",
+    title: "Inside a sound bath",
+    length: "Video",
     poster: "/images/meditation-sunrise.jpg",
   },
   {
-    title: "Hip openers to unwind",
-    length: "14:48",
-    poster: "/images/mobility.jpg",
+    title: "Pilates core basics",
+    length: "Video",
+    poster: "/images/core-strength.jpg",
   },
 ];
 
 export const testimonial = {
   quote:
-    "Rochael has a way of making you feel completely safe and completely capable at the same time. I leave every class lighter than I arrived.",
+    "Ro has a way of making you feel completely safe and completely capable at the same time. I leave every session lighter than I arrived.",
   name: "Client name",
-  detail: "Private sessions, 1 year",
+  detail: "Placeholder — add a real review",
 };
 
 export const pillars = [
-  { title: "Breath first", body: "Every session starts and ends with the breath — your anchor on and off the mat." },
-  { title: "Every body welcome", body: "Options, props and modifications are offered in every class. You're never behind." },
-  { title: "Strength in softness", body: "Build real, functional strength without forcing or punishing your body." },
-  { title: "Rest is practice", body: "Stillness is not a reward you earn. It's part of the work." },
+  { title: "Connection", body: "Experiences designed to bring people together — and closer to themselves." },
+  { title: "Every body welcome", body: "Options and modifications in every session. You're never behind." },
+  { title: "Strength in softness", body: "Build real strength through yoga and Pilates without forcing your body." },
+  { title: "Rest is practice", body: "Sound and stillness are part of the work, not a reward for it." },
 ];
 
 export const cta = {
-  title: "Your first class is waiting.",
-  body: "New here? Start with an introductory session and find the practice that fits you.",
+  title: "Your first session is waiting.",
+  body: "Join a class, book a private session or plan a wellness experience for your people.",
   primary: { label: "Book a session", href: "/contact#book" },
 };
 
 export const about = {
-  title: ["Hi, I'm", "Rochael."],
-  lead: "I teach yoga and mindful movement for people who want to feel at home in their bodies again.",
+  title: ["Hi, I'm", "Ro."],
+  lead: "I'm Rochelle Chukwuma — a wellness experience curator in Abuja. I design experiences that connect people.",
   paragraphs: [
-    "My own practice began as a way to slow down. Over time it became the place I return to — to breathe, to rebuild strength, and to listen.",
-    "Today I guide group classes, private sessions and retreats that balance effort with ease. My teaching draws on vinyasa, restorative yoga, breathwork and functional mobility, and is always rooted in kindness.",
-    "Whether you're stepping onto a mat for the first time or returning after years away, you are welcome exactly as you are.",
+    "Wellbeing With Ro brings together yoga, Pilates and sound bath into experiences that help you slow down, move well and feel at home in your body.",
+    "From group classes and private sessions to birthday gatherings and team wellness days, every experience is thoughtfully designed — warm, welcoming and grounded.",
+    "Whether you're stepping onto a mat for the first time or returning after a long break, you are welcome exactly as you are.",
   ],
   portrait: "/images/meditation-sunrise.jpg",
-  wide: "/images/beach-flow.jpg",
+  wide: "/images/retreat-canyon.jpg",
   stats: [
-    { value: "8+", label: "Years teaching" },
-    { value: "1,200+", label: "Classes guided" },
-    { value: "500h", label: "Yoga training" },
+    { value: "Yoga", label: "Flow & breath" },
+    { value: "Pilates", label: "Core & control" },
+    { value: "Sound", label: "Bath & rest" },
   ],
 };
 
@@ -179,71 +181,70 @@ export type ClassDetail = {
 
 export const classes: ClassDetail[] = [
   {
-    id: "group-flow",
-    title: "Group Flow",
-    body: "A dynamic, breath-linked vinyasa class that builds heat and focus, then winds down into a long, grounding savasana.",
+    id: "yoga",
+    title: "Yoga",
+    body: "Breath-led yoga that builds strength and flexibility, then winds down into a long, grounding rest.",
     image: "/images/studio-class.jpg",
-    details: ["60 minutes", "All levels", "Studio & live online"],
+    details: ["All levels", "Group & private", "Abuja"],
+  },
+  {
+    id: "pilates",
+    title: "Pilates",
+    body: "Mat Pilates focused on core strength, posture and controlled, mindful movement.",
+    image: "/images/core-strength.jpg",
+    details: ["All levels", "Group & private", "Abuja"],
+  },
+  {
+    id: "sound-bath",
+    title: "Sound Bath",
+    body: "A deeply restful session where you lie back and let the sound of singing bowls carry you into stillness.",
+    image: "/images/sound-bowl.jpg",
+    details: ["No experience needed", "Group & private", "Abuja"],
   },
   {
     id: "private",
     title: "Private Sessions",
-    body: "Practice designed only for you — whether you're new to yoga, recovering from injury, or deepening an established practice.",
+    body: "One-to-one yoga, Pilates or sound sessions designed around your body, goals and schedule.",
     image: "/images/private-session.jpg",
-    details: ["75 minutes", "Tailored plan", "In person or online"],
+    details: ["Tailored to you", "By appointment"],
   },
   {
-    id: "breath",
-    title: "Breath & Stillness",
-    body: "Simple, powerful breath techniques and guided meditation to calm the nervous system and sharpen attention.",
+    id: "experiences",
+    title: "Curated Experiences",
+    body: "Wellness gatherings for birthdays, celebrations and friends — movement, sound and connection, designed for your occasion.",
+    image: "/images/beach-flow.jpg",
+    details: ["Birthdays & celebrations", "Tailor-made", "Enquire for dates"],
+  },
+  {
+    id: "corporate",
+    title: "Corporate Wellness",
+    body: "Sessions for teams and workplaces to de-stress, reset and connect — on site or at a venue of your choice.",
     image: "/images/seated-practice.jpg",
-    details: ["45 minutes", "Beginner friendly", "Live online"],
-  },
-  {
-    id: "strength",
-    title: "Strength & Mobility",
-    body: "Bodyweight strength, active flexibility and joint care — so your body feels capable in everyday life.",
-    image: "/images/core-strength.jpg",
-    details: ["50 minutes", "Intermediate", "Studio"],
-  },
-  {
-    id: "restore",
-    title: "Sound & Restore",
-    body: "Long, supported postures accompanied by singing bowls. Deeply restful and perfect for the end of a long week.",
-    image: "/images/sound-bowl.jpg",
-    details: ["75 minutes", "All levels", "Studio"],
-  },
-  {
-    id: "retreats",
-    title: "Retreats",
-    body: "Seasonal weekends and weeklong escapes combining daily practice, nourishing food and time in nature.",
-    image: "/images/retreat-canyon.jpg",
-    details: ["2–7 days", "Small groups", "Dates announced seasonally"],
+    details: ["For teams", "On site or venue", "Enquire for pricing"],
   },
 ];
 
+/** Placeholder timetable — replace with Ro's real schedule. */
 export const schedule = [
-  { day: "Monday", time: "07:00", name: "Group Flow", where: "Studio" },
-  { day: "Tuesday", time: "19:30", name: "Breath & Stillness", where: "Online" },
-  { day: "Wednesday", time: "18:00", name: "Strength & Mobility", where: "Studio" },
-  { day: "Thursday", time: "07:00", name: "Group Flow", where: "Online" },
-  { day: "Friday", time: "19:00", name: "Sound & Restore", where: "Studio" },
-  { day: "Sunday", time: "10:00", name: "Group Flow", where: "Studio" },
+  { day: "Monday", time: "07:00", name: "Yoga", where: "Abuja" },
+  { day: "Wednesday", time: "18:00", name: "Pilates", where: "Abuja" },
+  { day: "Friday", time: "19:00", name: "Sound Bath", where: "Abuja" },
+  { day: "Saturday", time: "09:00", name: "Yoga", where: "Abuja" },
 ];
 
 export const footer = {
   groups: [
     {
-      title: "Practice",
+      title: "Experiences",
       links: [
-        { label: "Classes", href: "/classes" },
-        { label: "Private sessions", href: "/classes#private" },
-        { label: "Retreats", href: "/classes#retreats" },
+        { label: "Yoga", href: "/classes#yoga" },
+        { label: "Pilates", href: "/classes#pilates" },
+        { label: "Sound bath", href: "/classes#sound-bath" },
         { label: "Schedule", href: "/classes#schedule" },
       ],
     },
     {
-      title: "Rochael",
+      title: "Wellbeing with Ro",
       links: [
         { label: "About", href: "/about" },
         { label: "Watch", href: "/#watch" },

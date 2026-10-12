@@ -1167,6 +1167,14 @@ p {
   font-style: italic;
   color: var(--clay);
 }
+.footer-top p.footer-by {
+  margin-top: 14px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
 .footer-top p {
   margin-top: 20px;
   max-width: 360px;
@@ -1201,7 +1209,19 @@ p {
 }
 .socials {
   display: flex;
+  align-items: center;
   gap: 12px;
+}
+.socials a.handle {
+  width: auto;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  font-size: 14px;
+}
+.socials a.handle:hover {
+  background: none;
+  color: var(--linen);
 }
 .socials a {
   width: 44px;

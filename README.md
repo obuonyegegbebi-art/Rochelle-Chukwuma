@@ -1,6 +1,6 @@
-# Rochael Chukwuma — website
+# Wellbeing With Ro — website
 
-Next.js site for Rochael Chukwuma: yoga, breathwork and mindful movement.
+Next.js site for **Wellbeing With Ro** by Rochelle Chukwuma: yoga, Pilates and sound bath in Abuja.
 
 ## Run it
 
@@ -21,7 +21,7 @@ All words, links, classes, schedule and media paths live in **`src/content/site.
 - **Video gallery ("Practise anywhere"):** for each item in `videos`, set either
   `src: "/media/file.mp4"` or `embed: "https://www.youtube.com/embed/VIDEO_ID"`.
 - **Photos:** live in `public/images/`. Current ones are Unsplash stock placeholders —
-  replace with Rochael's own photography (keep the same file names, or update paths).
+  replace with Ro's own photography (keep the same file names, or update paths).
 
 ## Pages
 

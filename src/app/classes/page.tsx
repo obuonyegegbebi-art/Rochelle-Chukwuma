@@ -4,8 +4,8 @@ import Link from "next/link";
 import { classes, schedule } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Classes",
-  description: "Group flow, private sessions, breathwork, strength, restorative sound and retreats.",
+  title: "Experiences",
+  description: "Yoga, Pilates, sound bath, private sessions, curated experiences and corporate wellness in Abuja.",
 };
 
 export default function ClassesPage() {
@@ -13,14 +13,14 @@ export default function ClassesPage() {
     <>
       <section className="page-hero">
         <div className="container">
-          <span className="kicker reveal">Classes</span>
+          <span className="kicker reveal">Experiences</span>
           <h1 className="display-xl reveal" style={{ marginTop: 24 }}>
-            <span className="line">Ways to</span>
-            <span className="line">practise.</span>
+            <span className="line">Move, breathe,</span>
+            <span className="line">connect.</span>
           </h1>
           <p className="lead reveal">
-            From energising flows to deeply restful evenings — choose what your body needs today.
-            Every class welcomes beginners.
+            Yoga, Pilates and sound bath — in a group, one-to-one, or designed around your
+            occasion. Every session welcomes beginners.
           </p>
         </div>
       </section>
@@ -41,7 +41,7 @@ export default function ClassesPage() {
                   ))}
                 </div>
                 <Link href="/contact#book" className="text-link">
-                  Book {c.title} →
+                  Enquire about {c.title} →
                 </Link>
               </div>
               <div className="class-image">
