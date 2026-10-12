@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import { Fraunces, Manrope } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import RevealObserver from "@/components/RevealObserver";
 import { site } from "@/content/site";
 import "./globals.css";
 
@@ -46,13 +45,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       id="top"
       className={`${fraunces.variable} ${manrope.variable}`}
-      suppressHydrationWarning
     >
-      <head>
-        <script
-          dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }}
-        />
-      </head>
       <body>
         <a href="#main" className="skip-link">
           Skip to content
@@ -60,7 +53,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Header />
         <main id="main">{children}</main>
         <Footer />
-        <RevealObserver />
       </body>
     </html>
   );

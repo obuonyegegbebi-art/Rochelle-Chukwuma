@@ -20,7 +20,7 @@ export default function Home() {
     <>
       {/* Hero — full-bleed video */}
       <section className="hero">
-        <Media src={hero.video.src} poster={hero.video.poster} priority />
+        <Media src={hero.video.src} poster={hero.video.poster} preload />
         <div className="container hero-content">
           <span className="kicker reveal">{hero.eyebrow}</span>
           <h1 className="display-xl reveal" style={{ "--delay": "120ms" } as React.CSSProperties}>

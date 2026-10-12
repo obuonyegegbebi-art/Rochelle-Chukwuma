@@ -28,7 +28,7 @@ export default function AboutPage() {
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="container split">
           <div className="split-media reveal">
-            <Image src={about.portrait} alt="Yoga practice at sunrise" fill sizes="(max-width: 860px) 100vw, 50vw" />
+            <Image src={about.portrait} alt="Ro in the studio" fill loading="eager" sizes="(max-width: 860px) 100vw, 50vw" />
           </div>
           <div className="about-copy reveal">
             {about.paragraphs.map((p) => (

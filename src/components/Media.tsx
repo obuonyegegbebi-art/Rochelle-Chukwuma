@@ -4,14 +4,15 @@ type Props = {
   src?: string;
   poster: string;
   alt?: string;
-  priority?: boolean;
+  /** Preload the poster — use for the above-the-fold hero (LCP image). */
+  preload?: boolean;
 };
 
 /**
  * Full-bleed background media. Plays a muted, looping video when `src`
  * is set; otherwise shows the poster with a slow cinematic zoom.
  */
-export default function Media({ src, poster, alt = "", priority }: Props) {
+export default function Media({ src, poster, alt = "", preload }: Props) {
   return (
     <div className="media" aria-hidden={alt ? undefined : true}>
       {src ? (
@@ -25,7 +26,7 @@ export default function Media({ src, poster, alt = "", priority }: Props) {
           alt={alt}
           fill
           sizes="100vw"
-          priority={priority}
+          preload={preload}
         />
       )}
     </div>
