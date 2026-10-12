@@ -1170,6 +1170,40 @@ p {
   }
 }
 
+/* ---------- Prose (privacy) & 404 ---------- */
+.prose {
+  max-width: 760px;
+}
+.prose h2 {
+  font-size: clamp(28px, 3vw, 40px);
+  margin: 48px 0 16px;
+}
+.prose h2:first-child {
+  margin-top: 0;
+}
+.prose p {
+  color: var(--muted);
+}
+.prose p + p {
+  margin-top: 14px;
+}
+.prose p a,
+.form-note a {
+  color: var(--clay);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.not-found {
+  min-height: 80vh;
+}
+.not-found-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 28px;
+  margin-top: 40px;
+}
+
 /* ---------- Footer ---------- */
 .footer {
   background: var(--ink);

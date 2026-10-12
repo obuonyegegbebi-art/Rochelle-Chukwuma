@@ -1,11 +1,13 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { classes, site } from "@/content/site";
+import { whatsappLink } from "@/lib/url";
 
 /**
- * Opens the visitor's email app with the enquiry pre-filled.
- * Swap this for a real form service / API route when ready.
+ * Builds the enquiry into a WhatsApp message to Ro and opens WhatsApp
+ * (app on phones, WhatsApp Web on desktop). Nothing is stored by the site.
  */
 export default function ContactForm() {
   const [sent, setSent] = useState(false);
@@ -13,18 +15,22 @@ export default function ContactForm() {
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
-    const name = String(data.get("name") ?? "");
-    const subject = `Booking enquiry — ${data.get("interest")} (${name})`;
-    const body = [
-      `Name: ${name}`,
-      `Email: ${data.get("email")}`,
-      `Phone: ${data.get("phone") || "—"}`,
-      `Interested in: ${data.get("interest")}`,
-      `Format: ${data.get("format")}`,
+    const line = (label: string, key: string) => {
+      const v = String(data.get(key) ?? "").trim();
+      return v ? `${label}: ${v}` : null;
+    };
+    const text = [
+      `Hi Ro! I'd like to book with ${site.name}.`,
       "",
-      String(data.get("message") ?? ""),
-    ].join("\n");
-    window.location.href = `mailto:${site.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      line("Name", "name"),
+      line("Email", "email"),
+      line("Interested in", "interest"),
+      line("Format", "format"),
+      line("Message", "message"),
+    ]
+      .filter((l) => l !== null)
+      .join("\n");
+    window.open(whatsappLink(site.whatsapp, text), "_blank", "noopener");
     setSent(true);
   }
 
@@ -35,12 +41,8 @@ export default function ContactForm() {
         <input id="name" name="name" autoComplete="name" required />
       </div>
       <div className="field">
-        <label htmlFor="email">Email</label>
-        <input id="email" name="email" type="email" autoComplete="email" required />
-      </div>
-      <div className="field">
-        <label htmlFor="phone">Phone (optional)</label>
-        <input id="phone" name="phone" type="tel" autoComplete="tel" />
+        <label htmlFor="email">Email (optional)</label>
+        <input id="email" name="email" type="email" autoComplete="email" />
       </div>
       <div className="field">
         <label htmlFor="interest">I&apos;m interested in</label>
@@ -51,7 +53,7 @@ export default function ContactForm() {
           <option>Something else</option>
         </select>
       </div>
-      <div className="field full">
+      <div className="field">
         <label htmlFor="format">Format</label>
         <select id="format" name="format" defaultValue="Group class">
           <option>Group class</option>
@@ -65,13 +67,18 @@ export default function ContactForm() {
       </div>
       <div className="field full">
         <button type="submit" className="btn btn-clay">
-          Send enquiry
+          Send on WhatsApp
         </button>
       </div>
       <p className="form-note" aria-live="polite">
-        {sent
-          ? "Your email app should now be open with your message ready to send."
-          : "Ro usually replies within two working days."}
+        {sent ? (
+          "WhatsApp should now be open with your message ready — just press send."
+        ) : (
+          <>
+            Your message opens in WhatsApp, ready to send to Ro. See our{" "}
+            <Link href="/privacy">privacy policy</Link>.
+          </>
+        )}
       </p>
     </form>
   );

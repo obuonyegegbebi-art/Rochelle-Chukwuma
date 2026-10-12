@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { footer, site } from "@/content/site";
 import Year from "./Year";
+import { whatsappLink } from "@/lib/url";
 
 const icons = {
   Instagram: (
@@ -43,7 +44,9 @@ export default function Footer() {
         </div>
 
         <div className="footer-social">
-          <a href={`mailto:${site.email}`}>{site.email}</a>
+          <a href={whatsappLink(site.whatsapp)} target="_blank" rel="noreferrer">
+            WhatsApp {site.phone}
+          </a>
           <div className="socials">
             <a href={site.instagram} target="_blank" rel="noreferrer" className="handle">
               {site.instagramHandle}
@@ -61,7 +64,7 @@ export default function Footer() {
             © <Year /> {site.name}. All rights reserved.
           </span>
           <nav aria-label="Legal">
-            <Link href="/contact">Contact</Link>
+            <Link href="/privacy">Privacy</Link>
             <a href="#top">Back to top ↑</a>
           </nav>
         </div>

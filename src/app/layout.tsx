@@ -3,6 +3,7 @@ import { Fraunces, Manrope } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { site } from "@/content/site";
+import { siteUrl, whatsappLink } from "@/lib/url";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -17,9 +18,6 @@ const manrope = Manrope({
   subsets: ["latin"],
 });
 
-const siteUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
-  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-  : "http://localhost:3000";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -31,12 +29,31 @@ export const metadata: Metadata = {
   openGraph: {
     title: site.name,
     description: site.description,
-    images: ["/images/hero-sunset.jpg"],
+    siteName: site.name,
+    locale: "en_NG",
+    type: "website",
   },
+  twitter: { card: "summary_large_image" },
 };
 
 export const viewport: Viewport = {
   themeColor: "#f5efe6",
+};
+
+/** Structured data so search engines understand the business (name, place, contact). */
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "HealthAndBeautyBusiness",
+  name: site.name,
+  description: site.description,
+  url: siteUrl,
+  image: `${siteUrl}/opengraph-image`,
+  telephone: site.phone,
+  address: { "@type": "PostalAddress", addressLocality: site.city, addressCountry: site.country },
+  areaServed: site.city,
+  founder: { "@type": "Person", name: site.founder },
+  sameAs: [site.instagram, whatsappLink(site.whatsapp)],
+  knowsAbout: ["Yoga", "Pilates", "Sound bath", "Corporate wellness"],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -53,6 +70,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Header />
         <main id="main">{children}</main>
         <Footer />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
+        />
       </body>
     </html>
   );

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 import { site } from "@/content/site";
+import { whatsappLink } from "@/lib/url";
 
 export const metadata: Metadata = {
   title: "Contact & Booking",
@@ -29,11 +30,21 @@ export default function ContactPage() {
             <span className="kicker">Get in touch</span>
             <dl>
               <div>
-                <dt>Email</dt>
+                <dt>WhatsApp</dt>
                 <dd>
-                  <a href={`mailto:${site.email}`}>{site.email}</a>
+                  <a href={whatsappLink(site.whatsapp)} target="_blank" rel="noreferrer">
+                    {site.phone}
+                  </a>
                 </dd>
               </div>
+              {site.email && (
+                <div>
+                  <dt>Email</dt>
+                  <dd>
+                    <a href={`mailto:${site.email}`}>{site.email}</a>
+                  </dd>
+                </div>
+              )}
               <div>
                 <dt>Where</dt>
                 <dd>{site.location}</dd>

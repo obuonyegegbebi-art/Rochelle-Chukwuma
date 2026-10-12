@@ -16,8 +16,14 @@ export const site = {
   tagline: "Wellness experiences that connect people.",
   description:
     "Wellbeing With Ro by Rochelle Chukwuma — yoga, Pilates and sound bath experiences in Abuja. Group classes, private sessions and curated wellness events.",
-  email: "hello@wellbeingwithro.com",
+  /** Leave empty until Ro confirms her email — it's hidden while empty. */
+  email: "",
+  phone: "+234 707 877 3261",
+  /** WhatsApp number in international format, digits only (used for wa.me links). */
+  whatsapp: "2347078773261",
   location: "Abuja, Nigeria",
+  city: "Abuja",
+  country: "NG",
   instagram: "https://www.instagram.com/wellbeingwithro",
   instagramHandle: "@wellbeingwithro",
 };
@@ -276,6 +282,7 @@ export const footer = {
         { label: "Watch", href: "/#watch" },
         { label: "Contact", href: "/contact" },
         { label: "Book a session", href: "/contact#book" },
+        { label: "Privacy", href: "/privacy" },
       ],
     },
   ],
