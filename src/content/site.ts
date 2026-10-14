@@ -41,14 +41,14 @@ export const hero = {
   body: "Wellness experiences that connect you to your body, your breath and each other. Curated by Rochelle Chukwuma.",
   primary: { label: "Book a session", href: "/contact#book" },
   secondary: { label: "Explore experiences", href: "/classes" },
-  video: { src: "", poster: "/images/hero-sunset.jpg" },
+  image: { src: "/images/ro/hero-silhouette.jpg", alt: "Ro holding a warrior pose in a blue-lit studio" },
 };
 
 export const intro = {
   kicker: "Wellbeing with Ro",
   statement:
     "Wellness is better shared. I design experiences that bring people together — and back to themselves.",
-  body: "Through yoga, Pilates and sound bath, Ro creates warm, welcoming spaces in Abuja to move, breathe and slow down. No experience needed — just come as you are.",
+  body: "Through yoga, Pilates and sound bath, Ro creates warm, welcoming spaces in Abuja to move, breathe and slow down. Led by a 200hr and 500hr certified yoga teacher. No experience needed — just come as you are.",
   link: { label: "Meet Ro", href: "/about" },
 };
 
@@ -64,35 +64,35 @@ export const offerings: Offering[] = [
   {
     title: "Yoga",
     body: "Flowing, breath-led classes that build strength, ease and focus.",
-    image: "/images/ig/outdoor-bridge.jpg",
+    image: "/images/ro/yoga-down-dog.jpg",
     href: "/classes#yoga",
     meta: "Indoors & outdoors",
   },
   {
     title: "Pilates",
     body: "Mat and reformer Pilates for core strength, posture and control.",
-    image: "/images/ig/reformer-pilates.jpg",
+    image: "/images/ro/poster-reformer-pilates.jpg",
     href: "/classes#pilates",
     meta: "Group & private",
   },
   {
     title: "Sound Bath",
     body: "Lie back and let singing bowls guide you into deep rest.",
-    image: "/images/sound-bowl.jpg",
+    image: "/images/ro/sound-bath.jpg",
     href: "/classes#sound-bath",
     meta: "Deep relaxation",
   },
   {
     title: "Private Sessions",
     body: "One-to-one practice shaped entirely around you and your goals.",
-    image: "/images/private-session.jpg",
+    image: "/images/ro/yoga-up-dog.jpg",
     href: "/classes#private",
     meta: "By appointment",
   },
   {
     title: "Curated Experiences",
     body: "Wellness gatherings for birthdays, celebrations and friends.",
-    image: "/images/ig/birthday.jpg",
+    image: "/images/ro/poster-birthday.jpg",
     href: "/classes#experiences",
     meta: "Tailor-made",
   },
@@ -109,7 +109,7 @@ export const feature = {
   kicker: "Watch & practise",
   title: "Press play. Breathe out.",
   body: "Moments from Ro's classes, sound baths and gatherings — under the trees, in the studio and beyond Abuja.",
-  video: { src: "", poster: "/images/lake-stillness.jpg" },
+  video: { src: "/media/garden.mp4", poster: "/images/ro/poster-garden.jpg" },
 };
 
 export type VideoItem = {
@@ -134,24 +134,24 @@ export const videos: VideoItem[] = [
     vertical: true,
   },
   {
-    title: "Yoga under the trees",
-    length: "Reel",
-    poster: "/images/ig/outdoor-group.jpg",
-    embed: "https://www.instagram.com/reel/DeY3CZnuRwz/embed/",
+    title: "What is a sound bath?",
+    length: "0:13",
+    poster: "/images/ro/poster-sound-bath.jpg",
+    src: "/media/sound-bath.mp4",
     vertical: true,
   },
   {
-    title: "W is for women & wellbeing",
-    length: "Reel",
-    poster: "/images/ig/women-wellbeing.jpg",
-    embed: "https://www.instagram.com/reel/Dd3-3PVowuQ/embed/",
+    title: "Reformer Pilates",
+    length: "0:30",
+    poster: "/images/ro/poster-reformer-pilates.jpg",
+    src: "/media/reformer-pilates.mp4",
     vertical: true,
   },
   {
-    title: "Teaching yoga in Taraba",
-    length: "Reel",
-    poster: "/images/ig/taraba.jpg",
-    embed: "https://www.instagram.com/reel/Ddi91AiIM1N/embed/",
+    title: "A birthday wellness gathering",
+    length: "0:22",
+    poster: "/images/ro/poster-birthday.jpg",
+    src: "/media/birthday.mp4",
     vertical: true,
   },
 ];
@@ -189,17 +189,30 @@ export const cta = {
 export const about = {
   title: ["Hi, I'm", "Ro."],
   lead: "I'm Rochelle Chukwuma — a wellbeing facilitator in Abuja. I work at the intersection of movement, sound and nature.",
-  paragraphs: [
-    "Wellbeing With Ro brings together yoga, Pilates and sound bath into experiences that help you slow down, move well and feel at home in your body.",
-    "From group classes and private sessions to birthday gatherings and team wellness days, every experience is thoughtfully designed — warm, welcoming and grounded.",
-    "Whether you're stepping onto a mat for the first time or returning after a long break, you are welcome exactly as you are.",
+  /** Ro's own words. */
+  blocks: [
+    {
+      title: "Who's behind it",
+      body: "I'm a 200hr and 500hr certified yoga teacher, and I bring that depth of training to everything I design, so the experience is beautiful and your body is also looked after.",
+    },
+    {
+      title: "Wherever you are",
+      body: "I create in studios, gardens, resorts, offices and far-flung places. If you can gather people, I can design the experience.",
+    },
+    {
+      title: "How you'll leave",
+      body: "Refreshed, rejuvenated and more at home in yourself.",
+    },
   ],
-  portrait: "/images/ig/meet-ro.jpg",
-  wide: "/images/retreat-canyon.jpg",
+  closing:
+    "Whether you're stepping onto a mat for the first time or returning after a long break, you're welcome exactly as you are.",
+  cta: { label: "Plan an experience with me", href: "/contact#book" },
+  portrait: "/images/ro/yoga-up-dog.jpg",
+  wide: "/images/ro/garden-wide.jpg",
   stats: [
-    { value: "Yoga", label: "Flow & breath" },
-    { value: "Pilates", label: "Core & control" },
-    { value: "Sound", label: "Bath & rest" },
+    { value: "200hr", label: "Certified yoga teacher" },
+    { value: "500hr", label: "Advanced certification" },
+    { value: "Anywhere", label: "Studios, gardens, resorts, offices" },
   ],
 };
 
@@ -216,35 +229,35 @@ export const classes: ClassDetail[] = [
     id: "yoga",
     title: "Yoga",
     body: "Breath-led yoga that builds strength and flexibility, then winds down into a long, grounding rest.",
-    image: "/images/ig/outdoor-bridge.jpg",
+    image: "/images/ro/yoga-down-dog.jpg",
     details: ["All levels", "Indoors & outdoors", "Abuja"],
   },
   {
     id: "pilates",
     title: "Pilates",
     body: "Mat and reformer Pilates focused on core strength, posture and controlled, mindful movement.",
-    image: "/images/ig/reformer-pilates.jpg",
+    image: "/images/ro/poster-reformer-pilates.jpg",
     details: ["All levels", "Group & private", "Abuja"],
   },
   {
     id: "sound-bath",
     title: "Sound Bath",
     body: "A deeply restful session where you lie back and let the sound of singing bowls carry you into stillness.",
-    image: "/images/sound-bowl.jpg",
+    image: "/images/ro/sound-bath.jpg",
     details: ["No experience needed", "Group & private", "Abuja"],
   },
   {
     id: "private",
     title: "Private Sessions",
     body: "One-to-one yoga, Pilates or sound sessions designed around your body, goals and schedule.",
-    image: "/images/private-session.jpg",
+    image: "/images/ro/yoga-up-dog.jpg",
     details: ["Tailored to you", "By appointment"],
   },
   {
     id: "experiences",
     title: "Curated Experiences",
     body: "Wellness gatherings for birthdays, celebrations and friends — movement, sound and connection, designed for your occasion.",
-    image: "/images/ig/birthday.jpg",
+    image: "/images/ro/poster-birthday.jpg",
     details: ["Birthdays & celebrations", "Tailor-made", "Enquire for dates"],
   },
   {

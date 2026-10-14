@@ -394,6 +394,36 @@ p {
 .hero .media {
   z-index: -2;
 }
+/* Hero variant: Ro's portrait-format studio photo on deep navy.
+   Phones: photo fills the screen. Wider screens: full figure on the right,
+   edges faded into the navy so the studio lights disappear. */
+.hero--photo {
+  background: #060c1c;
+}
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+}
+.hero-photo img {
+  object-fit: cover;
+  object-position: 50% 20%;
+}
+@media (min-width: 901px) {
+  /* Panel matches the photo's own proportions, so the full pose is shown. */
+  .hero-photo {
+    left: auto;
+    right: clamp(0px, 4vw, 72px);
+    width: auto;
+    aspect-ratio: 1039 / 1463;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 22%, #000 78%, transparent 96%);
+    mask-image: linear-gradient(to right, transparent 0%, #000 22%, #000 78%, transparent 96%);
+  }
+  .hero-photo img {
+    object-position: 50% 50%;
+  }
+}
 .hero::after {
   content: "";
   position: absolute;
@@ -587,6 +617,10 @@ p {
 .band .media {
   z-index: -2;
 }
+.band .media video,
+.band .media img {
+  object-position: 50% 72%;
+}
 .band::after {
   content: "";
   position: absolute;
@@ -752,6 +786,10 @@ p {
   aspect-ratio: 16 / 9;
   background: #000;
   position: relative;
+}
+.modal-frame.vertical video {
+  object-fit: contain;
+  background: #000;
 }
 .modal-frame.vertical {
   width: min(400px, 100%);
@@ -947,23 +985,36 @@ p {
 }
 
 /* ---------- About ---------- */
-.about-copy p + p {
-  margin-top: 20px;
+.about-block + .about-block {
+  margin-top: 32px;
 }
-.about-copy p {
+.about-block h2 {
+  font-size: clamp(26px, 2.4vw, 34px);
+  margin-bottom: 10px;
+}
+.about-block p {
   color: var(--muted);
+  font-size: 18px;
 }
-.about-copy p:first-child {
-  color: var(--ink);
-  font-size: 20px;
+.about-closing {
+  margin: 36px 0 28px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(20px, 1.8vw, 24px);
+  line-height: 1.4;
 }
 .stats {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 40px;
   margin-top: 48px;
   padding-top: 32px;
   border-top: 1px solid var(--line);
+}
+.stats > div {
+  max-width: 190px;
 }
 .stats strong {
   display: block;
@@ -988,6 +1039,7 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 50% 60%;
 }
 
 /* ---------- Classes page ---------- */

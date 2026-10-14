@@ -28,12 +28,19 @@ export default function AboutPage() {
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="container split">
           <div className="split-media reveal">
-            <Image src={about.portrait} alt="Ro in the studio" fill loading="eager" sizes="(max-width: 860px) 100vw, 50vw" />
+            <Image src={about.portrait} alt="Yoga practice in the garden" fill loading="eager" sizes="(max-width: 860px) 100vw, 50vw" />
           </div>
           <div className="about-copy reveal">
-            {about.paragraphs.map((p) => (
-              <p key={p}>{p}</p>
+            {about.blocks.map((b) => (
+              <div key={b.title} className="about-block">
+                <h2>{b.title}</h2>
+                <p>{b.body}</p>
+              </div>
             ))}
+            <p className="about-closing">{about.closing}</p>
+            <Link href={about.cta.href} className="btn btn-clay">
+              {about.cta.label}
+            </Link>
             <div className="stats">
               {about.stats.map((s) => (
                 <div key={s.label}>
@@ -47,7 +54,7 @@ export default function AboutPage() {
       </section>
 
       <div className="wide-image reveal">
-        <Image src={about.wide} alt="Practising in nature" fill sizes="100vw" />
+        <Image src={about.wide} alt="A garden yoga session in Abuja" fill sizes="100vw" />
       </div>
 
       <section className="section">

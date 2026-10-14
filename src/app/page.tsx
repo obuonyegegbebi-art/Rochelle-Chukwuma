@@ -18,9 +18,17 @@ import {
 export default function Home() {
   return (
     <>
-      {/* Hero — full-bleed video */}
-      <section className="hero">
-        <Media src={hero.video.src} poster={hero.video.poster} preload />
+      {/* Hero — Ro's studio portrait */}
+      <section className="hero hero--photo">
+        <div className="hero-photo">
+          <Image
+            src={hero.image.src}
+            alt={hero.image.alt}
+            fill
+            preload
+            sizes="(max-width: 900px) 100vw, 55vw"
+          />
+        </div>
         <div className="container hero-content">
           <span className="kicker reveal">{hero.eyebrow}</span>
           <h1 className="display-xl reveal" style={{ "--delay": "120ms" } as React.CSSProperties}>

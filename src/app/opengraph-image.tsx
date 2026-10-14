@@ -14,7 +14,7 @@ export default async function OpengraphImage() {
     readFile(join(root, "assets/Fraunces-Regular.ttf")),
     readFile(join(root, "assets/Fraunces-Italic.ttf")),
     readFile(join(root, "assets/Manrope-Medium.ttf")),
-    readFile(join(root, "public/images/ig/outdoor-group.jpg")),
+    readFile(join(root, "public/images/ro/sound-bath.jpg")),
   ]);
   const photoSrc = `data:image/jpeg;base64,${photo.toString("base64")}`;
 
