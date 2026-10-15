@@ -1265,6 +1265,88 @@ p {
   margin-top: 40px;
 }
 
+/* ---------- WhatsApp ---------- */
+.btn-whatsapp {
+  background: #25d366;
+  color: #0b2e1a;
+}
+.btn-whatsapp:hover {
+  background: #1ebe5b;
+}
+.wa-dd {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 18px;
+  font-family: var(--font-body) !important;
+}
+.wa-number {
+  font-size: 16px;
+  color: var(--muted);
+}
+.footer-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer-wa svg {
+  color: #25d366;
+}
+.footer-wa:hover {
+  color: var(--linen);
+}
+
+/* Floating chat button — sits under the mobile menu (z 40) and video modal (z 80). */
+.wa-float {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(16px, env(safe-area-inset-bottom));
+  z-index: 35;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 56px;
+  padding: 0 22px 0 16px;
+  border-radius: 999px;
+  background: #25d366;
+  color: #0b2e1a;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(11, 46, 26, 0.28);
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+  animation: wa-in 0.6s var(--ease) 1.2s both;
+}
+.wa-float:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px rgba(11, 46, 26, 0.34);
+}
+@keyframes wa-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (max-width: 600px) {
+  /* Icon-only circle on phones so it doesn't cover content. */
+  .wa-float {
+    width: 56px;
+    padding: 0;
+    justify-content: center;
+  }
+  .wa-float-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+}
+
 /* ---------- Footer ---------- */
 .footer {
   background: var(--ink);

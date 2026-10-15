@@ -2,6 +2,7 @@ import Link from "next/link";
 import { footer, site } from "@/content/site";
 import Year from "./Year";
 import { whatsappLink } from "@/lib/url";
+import { WhatsAppIcon } from "./WhatsApp";
 
 const icons = {
   Instagram: (
@@ -44,8 +45,9 @@ export default function Footer() {
         </div>
 
         <div className="footer-social">
-          <a href={whatsappLink(site.whatsapp)} target="_blank" rel="noreferrer">
-            WhatsApp {site.phone}
+          <a href={whatsappLink(site.whatsapp)} target="_blank" rel="noreferrer" className="footer-wa">
+            <WhatsAppIcon size={18} />
+            Chat on WhatsApp · {site.phone}
           </a>
           <div className="socials">
             <a href={site.instagram} target="_blank" rel="noreferrer" className="handle">
