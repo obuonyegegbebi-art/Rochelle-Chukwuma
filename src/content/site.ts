@@ -71,7 +71,7 @@ export const offerings: Offering[] = [
   {
     title: "Pilates",
     body: "Mat and reformer Pilates for core strength, posture and control.",
-    image: "/images/ro/poster-reformer-pilates.jpg",
+    image: "/images/ro/pilates.jpg",
     href: "/classes#pilates",
     meta: "Group & private",
   },
@@ -99,7 +99,7 @@ export const offerings: Offering[] = [
   {
     title: "Corporate Wellness",
     body: "Sound healing, yoga, Pilates and retreat days — a real reset for teams.",
-    image: "/images/ig/dear-hr.jpg",
+    image: "/images/ro/corporate.jpg",
     href: "/classes#corporate",
     meta: "For teams",
   },
@@ -168,9 +168,9 @@ export const instagramPosts = [
 
 export const testimonial = {
   quote:
-    "Ro has a way of making you feel completely safe and completely capable at the same time. I leave every session lighter than I arrived.",
-  name: "Client name",
-  detail: "Placeholder — add a real review",
+    "Ro delivered an excellent sound bath session at our STILL experience in September. She brought such a calming presence, and beyond her skill, she's warm and kind. I highly recommend her.",
+  name: "Grace",
+  detail: "CoppahandGold",
 };
 
 export const pillars = [
@@ -236,7 +236,7 @@ export const classes: ClassDetail[] = [
     id: "pilates",
     title: "Pilates",
     body: "Mat and reformer Pilates focused on core strength, posture and controlled, mindful movement.",
-    image: "/images/ro/poster-reformer-pilates.jpg",
+    image: "/images/ro/pilates.jpg",
     details: ["All levels", "Group & private", "Abuja"],
   },
   {
@@ -264,7 +264,7 @@ export const classes: ClassDetail[] = [
     id: "corporate",
     title: "Corporate Wellness",
     body: "Not another team-building day. Sound healing, yoga & Pilates and retreat days that give your people a real reset.",
-    image: "/images/ig/dear-hr.jpg",
+    image: "/images/ro/corporate.jpg",
     details: ["For teams", "On site or venue", "Enquire for pricing"],
   },
 ];
