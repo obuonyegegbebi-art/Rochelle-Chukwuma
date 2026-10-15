@@ -10,7 +10,7 @@ import {
   intro,
   offerings,
   pillars,
-  testimonial,
+  testimonials,
   site,
   videos,
 } from "@/content/site";
@@ -164,18 +164,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonial */}
+      {/* Testimonials */}
       <section className="section testimonial">
         <div className="container">
-          <blockquote className="reveal">
-            <span className="mark" aria-hidden="true">
-              “
-            </span>
-            <p>{testimonial.quote}</p>
-            <footer>
-              {testimonial.name} · <span>{testimonial.detail}</span>
-            </footer>
-          </blockquote>
+          <span className="kicker reveal">Kind words</span>
+          <div className="testimonial-grid">
+            {testimonials.map((t) => (
+              <blockquote key={t.name} className="reveal">
+                <span className="mark" aria-hidden="true">
+                  “
+                </span>
+                <p>{t.quote}</p>
+                <footer>
+                  {t.name}
+                  {t.detail && (
+                    <>
+                      {" "}
+                      · <span>{t.detail}</span>
+                    </>
+                  )}
+                </footer>
+              </blockquote>
+            ))}
+          </div>
         </div>
       </section>
 

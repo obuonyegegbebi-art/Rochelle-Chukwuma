@@ -166,12 +166,20 @@ export const instagramPosts = [
   { image: "/images/ig/wellness-basket.jpg", href: "https://www.instagram.com/p/DdofDWQiJSv/", alt: "Wellness is balance, peace, clarity" },
 ];
 
-export const testimonial = {
-  quote:
-    "Ro delivered an excellent sound bath session at our STILL experience in September. She brought such a calming presence, and beyond her skill, she's warm and kind. I highly recommend her.",
-  name: "Grace",
-  detail: "CoppahandGold",
-};
+/** Real reviews — shown side by side on the home page. `detail` is optional. */
+export const testimonials: { quote: string; name: string; detail?: string }[] = [
+  {
+    quote:
+      "Ro delivered an excellent sound bath session at our STILL experience in September. She brought such a calming presence, and beyond her skill, she's warm and kind. I highly recommend her.",
+    name: "Grace",
+    detail: "CoppahandGold",
+  },
+  {
+    quote:
+      "Your session was so impactful, engaging and beautiful. You poured so much heart into it and our ladies felt it! Thank you for gracing us and making the gathering a memorable one.",
+    name: "The Blush Gathering Team",
+  },
+];
 
 export const pillars = [
   { title: "Connection", body: "Experiences designed to bring people together — and closer to themselves." },
