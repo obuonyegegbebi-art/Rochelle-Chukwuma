@@ -560,6 +560,43 @@ p {
   font-weight: 400;
   color: #e3a98d;
 }
+.retreat-price {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(251, 248, 243, 0.16);
+}
+.retreat-price strong {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(24px, 2.2vw, 30px);
+}
+.retreat-price span {
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: rgba(251, 248, 243, 0.65);
+}
+.retreat-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.btn-ghost-light {
+  border-color: rgba(251, 248, 243, 0.5);
+  color: var(--linen);
+}
+.btn-ghost-light:hover {
+  background: var(--linen);
+  color: var(--ink);
+  border-color: var(--linen);
+}
+.retreat-note {
+  margin-top: 14px;
+  font-size: 13px;
+  color: rgba(251, 248, 243, 0.55);
+}
 .retreat-body {
   margin: 20px 0 24px;
   max-width: 440px;

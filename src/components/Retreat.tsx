@@ -3,10 +3,10 @@ import { retreat, site } from "@/content/site";
 import { whatsappLink } from "@/lib/url";
 import { WhatsAppIcon } from "./WhatsApp";
 
-/** Featured upcoming retreat with a WhatsApp booking button. */
+/** Featured upcoming retreat: pay via Selar, or ask a question on WhatsApp. */
 export default function Retreat() {
   if (!retreat) return null;
-  const message = `Hi Ro! I'd like to reserve a spot at ${retreat.name}: ${retreat.subtitle} (${retreat.dates}, ${retreat.venue}).`;
+  const message = `Hi Ro! I have a question about ${retreat.name}: ${retreat.subtitle} (${retreat.dates}, ${retreat.venue}).`;
 
   return (
     <section className="retreat" aria-labelledby="retreat-title">
@@ -32,15 +32,29 @@ export default function Retreat() {
               </span>
             ))}
           </p>
-          <a
-            href={whatsappLink(site.whatsapp, message)}
-            target="_blank"
-            rel="noreferrer"
-            className="btn btn-light"
-          >
-            <WhatsAppIcon size={18} />
-            {retreat.cta}
-          </a>
+          <div className="retreat-price">
+            <strong>{retreat.price}</strong>
+            <span>{retreat.spots}</span>
+          </div>
+          <div className="retreat-actions">
+            {retreat.payLink && (
+              <a href={retreat.payLink} target="_blank" rel="noreferrer" className="btn btn-clay">
+                Pay now
+              </a>
+            )}
+            <a
+              href={whatsappLink(site.whatsapp, message)}
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn-ghost-light"
+            >
+              <WhatsAppIcon size={18} />
+              Ask a question
+            </a>
+          </div>
+          {retreat.payLink && (
+            <p className="retreat-note">Secure payment via Selar. Full details are sent after booking.</p>
+          )}
         </div>
       </div>
     </section>

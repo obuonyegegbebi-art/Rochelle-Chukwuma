@@ -49,6 +49,14 @@ export default function PrivacyPage() {
             sell your information or share it for marketing.
           </p>
 
+          <h2>Payments</h2>
+          <p>
+            Payments (for example, retreat tickets) are made on Selar, a secure third-party
+            checkout. Your payment details go directly to Selar and are never seen or stored by
+            this website. Selar shares your name and contact details with us so we can confirm your
+            booking, and its own privacy policy applies.
+          </p>
+
           <h2>Cookies and tracking</h2>
           <p>
             This website does not use advertising or tracking cookies. Our hosting provider

@@ -117,8 +117,12 @@ export const retreat: {
   body: string;
   /** Ro's words — their first letters spell the retreat name. */
   words: string[];
+  /** Price line and group size, from Ro's Selar listing. */
+  price: string;
+  spots: string;
+  /** Selar checkout link. The Pay button only shows when this is set. */
+  payLink: string;
   image: string;
-  cta: string;
 } | null = {
   kicker: "Upcoming retreat",
   name: "REST",
@@ -127,8 +131,10 @@ export const retreat: {
   venue: "Greenhouse Resort, Karshi",
   body: "A small-group wellness retreat to slow down, soften and be taken care of. Yoga, Pilates, sound bath, massage, nourishing meals, intimate conversations and a gift box to take home.",
   words: ["Restored", "Educated", "Soften", "Touched"],
+  price: "₦350,000 per person (sharing)",
+  spots: "Limited to 15–20 guests · Accommodation, meals, sessions & massage included",
+  payLink: "https://selar.com/5650dc42m3",
   image: "/images/ro/garden-wide.jpg",
-  cta: "Reserve your spot",
 };
 
 export const feature = {
