@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { classes, site } from "@/content/site";
+import { classes, retreat, site } from "@/content/site";
 import { whatsappLink } from "@/lib/url";
 
 /**
@@ -50,6 +50,7 @@ export default function ContactForm() {
           {classes.map((c) => (
             <option key={c.id}>{c.title}</option>
           ))}
+          {retreat && <option>{`${retreat.name} retreat (${retreat.dates})`}</option>}
           <option>Something else</option>
         </select>
       </div>

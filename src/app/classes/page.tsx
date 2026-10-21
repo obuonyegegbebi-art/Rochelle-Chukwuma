@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { classes, schedule } from "@/content/site";
+import Retreat from "@/components/Retreat";
 
 export const metadata: Metadata = {
   title: "Experiences",
@@ -25,7 +26,9 @@ export default function ClassesPage() {
         </div>
       </section>
 
-      <section className="section" style={{ paddingTop: 0 }}>
+      <Retreat />
+
+      <section className="section">
         <div className="container class-list">
           {classes.map((c, i) => (
             <article key={c.id} id={c.id} className="class-row reveal">

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Media from "@/components/Media";
 import VideoGallery from "@/components/VideoGallery";
+import Retreat from "@/components/Retreat";
 import {
   cta,
   feature,
@@ -52,6 +53,9 @@ export default function Home() {
         </div>
         <span className="scroll-cue">Scroll</span>
       </section>
+
+      {/* Upcoming retreat */}
+      <Retreat />
 
       {/* Intro statement */}
       <section className="section">

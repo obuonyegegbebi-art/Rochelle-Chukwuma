@@ -107,6 +107,23 @@ export const offerings: Offering[] = [
   },
 ];
 
+/** Featured upcoming retreat — shown on the home and Experiences pages. Set to null to hide. */
+export const retreat: {
+  kicker: string;
+  name: string;
+  dates: string;
+  body: string;
+  image: string;
+  cta: string;
+} | null = {
+  kicker: "Upcoming retreat",
+  name: "REST",
+  dates: "11–13 December 2026",
+  body: "A 2-day immersive experience designed to give you access to rest and ease.",
+  image: "/images/ro/garden-wide.jpg",
+  cta: "Reserve your spot",
+};
+
 export const feature = {
   kicker: "Watch & practise",
   title: "Press play. Breathe out.",

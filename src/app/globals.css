@@ -502,6 +502,55 @@ p {
   .scroll-cue { display: none; }
 }
 
+/* ---------- Upcoming retreat ---------- */
+.retreat {
+  background: #060c1c;
+  color: var(--linen);
+  padding: clamp(56px, 8vw, 112px) 0;
+}
+.retreat-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: clamp(32px, 6vw, 96px);
+  align-items: center;
+}
+.retreat-media {
+  position: relative;
+  aspect-ratio: 5 / 4;
+  overflow: hidden;
+  border-radius: 2px;
+}
+.retreat-media img {
+  object-fit: cover;
+}
+.retreat .kicker {
+  color: var(--sage);
+}
+.retreat-name {
+  margin-top: 20px;
+  font-size: clamp(64px, 9vw, 140px);
+  letter-spacing: 0.04em;
+  line-height: 0.95;
+}
+.retreat-dates {
+  margin-top: 18px;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(22px, 2.2vw, 30px);
+  color: #e3a98d;
+}
+.retreat-body {
+  margin: 20px 0 32px;
+  max-width: 440px;
+  color: rgba(251, 248, 243, 0.82);
+  font-size: 18px;
+}
+@media (max-width: 860px) {
+  .retreat-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---------- Intro statement ---------- */
 .intro {
   display: grid;
