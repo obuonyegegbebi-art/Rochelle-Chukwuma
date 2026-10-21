@@ -46,7 +46,10 @@ export default function ContactPage() {
               )}
               <div>
                 <dt>Where</dt>
-                <dd>{site.location}</dd>
+                <dd>
+                  {site.location}
+                  <span className="travel-note">{site.travel}</span>
+                </dd>
               </div>
               <div>
                 <dt>Follow</dt>

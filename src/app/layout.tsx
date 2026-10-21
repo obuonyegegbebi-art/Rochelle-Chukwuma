@@ -23,7 +23,7 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${site.name} — Yoga, Pilates & Sound Bath in Abuja`,
+    default: `${site.name} — Yoga, Pilates & Sound Bath`,
     template: `%s · ${site.name}`,
   },
   description: site.description,
@@ -51,7 +51,7 @@ const jsonLd = {
   image: `${siteUrl}/opengraph-image`,
   telephone: site.phone,
   address: { "@type": "PostalAddress", addressLocality: site.city, addressCountry: site.country },
-  areaServed: site.city,
+  areaServed: [site.city, "Nigeria"],
   founder: { "@type": "Person", name: site.founder },
   sameAs: [site.instagram, whatsappLink(site.whatsapp)],
   knowsAbout: ["Yoga", "Pilates", "Sound bath", "Corporate wellness"],

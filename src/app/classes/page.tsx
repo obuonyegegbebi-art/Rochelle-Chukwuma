@@ -5,7 +5,7 @@ import { classes, schedule } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Experiences",
-  description: "Yoga, Pilates, sound bath, private sessions, curated experiences and corporate wellness in Abuja.",
+  description: "Yoga, Pilates, sound bath, private sessions, curated experiences and corporate wellness. Based in Abuja, available to travel.",
 };
 
 export default function ClassesPage() {

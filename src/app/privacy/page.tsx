@@ -29,7 +29,7 @@ export default function PrivacyPage() {
           <div className="prose">
           <h2>Who we are</h2>
           <p>
-            This website belongs to {site.name}, run by {site.founder} in {site.location}. If you
+            This website belongs to {site.name}, run by {site.founder}, based in {site.location}. If you
             have any questions about your information, message us on{" "}
             <a href={whatsappLink(site.whatsapp)} target="_blank" rel="noreferrer">
               WhatsApp ({site.phone})

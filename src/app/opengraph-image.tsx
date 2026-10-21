@@ -3,7 +3,7 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { site } from "@/content/site";
 
-export const alt = `${site.name} — yoga, Pilates and sound bath in Abuja`;
+export const alt = `${site.name} — yoga, Pilates and sound bath`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -40,7 +40,7 @@ export default async function OpengraphImage() {
               color: "#b4613f",
             }}
           >
-            Yoga · Pilates · Sound bath — Abuja
+            Yoga · Pilates · Sound bath
           </div>
           <div style={{ display: "flex", flexDirection: "column", color: "#221c17" }}>
             <div style={{ fontFamily: "Fraunces", fontSize: 104, lineHeight: 1, letterSpacing: -3 }}>

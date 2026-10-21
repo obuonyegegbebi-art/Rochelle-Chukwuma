@@ -15,13 +15,15 @@ export const site = {
   founderShort: "Ro",
   tagline: "Wellness experiences that connect people.",
   description:
-    "Wellbeing With Ro by Rochelle Chukwuma — yoga, Pilates and sound bath experiences in Abuja. Group classes, private sessions and curated wellness events.",
+    "Wellbeing With Ro by Rochelle Chukwuma: yoga, Pilates and sound bath experiences, based in Abuja and available to travel. Group classes, private sessions and curated wellness events.",
   /** Leave empty until Ro confirms her email — it's hidden while empty. */
   email: "",
   phone: "+234 707 877 3261",
   /** WhatsApp number in international format, digits only (used for wa.me links). */
   whatsapp: "2347078773261",
+  /** Home base. Ro travels, so always pair it with `travel` and keep it off the home page. */
   location: "Abuja, Nigeria",
+  travel: "Available to travel",
   city: "Abuja",
   country: "NG",
   instagram: "https://www.instagram.com/wellbeingwithro",
@@ -36,7 +38,7 @@ export const nav = [
 ];
 
 export const hero = {
-  eyebrow: "Yoga · Pilates · Sound bath — Abuja",
+  eyebrow: "Yoga · Pilates · Sound bath",
   title: ["Come home", "to your body."],
   body: "Wellness experiences that connect you to your body, your breath and each other. Curated by Rochelle Chukwuma.",
   primary: { label: "Book a session", href: "/contact#book" },
@@ -48,7 +50,7 @@ export const intro = {
   kicker: "Wellbeing with Ro",
   statement:
     "Wellness is better shared. I design experiences that bring people together — and back to themselves.",
-  body: "Through yoga, Pilates and sound bath, Ro creates warm, welcoming spaces in Abuja to move, breathe and slow down. Led by a 200hr and 500hr certified yoga teacher. No experience needed — just come as you are.",
+  body: "Through yoga, Pilates and sound bath, Ro creates warm, welcoming spaces to move, breathe and slow down — wherever you are. Led by a 200hr and 500hr certified yoga teacher. No experience needed — just come as you are.",
   link: { label: "Meet Ro", href: "/about" },
 };
 
@@ -108,7 +110,7 @@ export const offerings: Offering[] = [
 export const feature = {
   kicker: "Watch & practise",
   title: "Press play. Breathe out.",
-  body: "Moments from Ro's classes, sound baths and gatherings — under the trees, in the studio and beyond Abuja.",
+  body: "Moments from Ro's classes, sound baths and gatherings — under the trees, in the studio and beyond.",
   video: { src: "/media/garden.mp4", poster: "/images/ro/poster-garden.jpg" },
 };
 
@@ -196,7 +198,7 @@ export const cta = {
 
 export const about = {
   title: ["Hi, I'm", "Ro."],
-  lead: "I'm Rochelle Chukwuma — a wellbeing facilitator in Abuja. I work at the intersection of movement, sound and nature.",
+  lead: "I'm Rochelle Chukwuma — a wellbeing facilitator based in Abuja and available to travel. I work at the intersection of movement, sound and nature.",
   /** Ro's own words. */
   blocks: [
     {
@@ -238,21 +240,21 @@ export const classes: ClassDetail[] = [
     title: "Yoga",
     body: "Breath-led yoga that builds strength and flexibility, then winds down into a long, grounding rest.",
     image: "/images/ro/yoga-down-dog.jpg",
-    details: ["All levels", "Indoors & outdoors", "Abuja"],
+    details: ["Private sessions", "All levels", "Indoors & outdoors"],
   },
   {
     id: "pilates",
     title: "Pilates",
     body: "Mat and reformer Pilates focused on core strength, posture and controlled, mindful movement.",
     image: "/images/ro/pilates.jpg",
-    details: ["All levels", "Group & private", "Abuja"],
+    details: ["Mat Pilates", "At Pinkinetics", "All levels"],
   },
   {
     id: "sound-bath",
     title: "Sound Bath",
     body: "A deeply restful session where you lie back and let the sound of singing bowls carry you into stillness.",
     image: "/images/ro/sound-bath.jpg",
-    details: ["No experience needed", "Group & private", "Abuja"],
+    details: ["No experience needed", "At your preferred location"],
   },
   {
     id: "private",
@@ -277,12 +279,12 @@ export const classes: ClassDetail[] = [
   },
 ];
 
-/** Placeholder timetable — replace with Ro's real schedule. */
+/** Ro's weekly timetable. */
 export const schedule = [
-  { day: "Monday", time: "07:00", name: "Yoga", where: "Abuja" },
-  { day: "Wednesday", time: "18:00", name: "Pilates", where: "Abuja" },
-  { day: "Friday", time: "19:00", name: "Sound Bath", where: "Abuja" },
-  { day: "Saturday", time: "09:00", name: "Yoga", where: "Abuja" },
+  { day: "Monday", time: "6pm", name: "Mat Pilates", where: "Pinkinetics" },
+  { day: "Wednesday", time: "9am", name: "Yoga", where: "Private session" },
+  { day: "Thursday", time: "10am", name: "Mat Pilates", where: "Pinkinetics" },
+  { day: "Saturday", time: "5pm", name: "Sound Bath", where: "Your preferred location" },
 ];
 
 export const footer = {
