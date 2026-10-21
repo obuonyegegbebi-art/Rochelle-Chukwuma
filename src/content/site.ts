@@ -111,15 +111,22 @@ export const offerings: Offering[] = [
 export const retreat: {
   kicker: string;
   name: string;
+  subtitle: string;
   dates: string;
+  venue: string;
   body: string;
+  /** Ro's words — their first letters spell the retreat name. */
+  words: string[];
   image: string;
   cta: string;
 } | null = {
   kicker: "Upcoming retreat",
   name: "REST",
-  dates: "11–13 December 2026",
-  body: "A 2-day immersive experience designed to give you access to rest and ease.",
+  subtitle: "A Weekend to Restore",
+  dates: "December 11–13",
+  venue: "Greenhouse Resort, Karshi",
+  body: "A small-group wellness retreat to slow down, soften and be taken care of. Yoga, Pilates, sound bath, massage, nourishing meals, intimate conversations and a gift box to take home.",
+  words: ["Restored", "Educated", "Soften", "Touched"],
   image: "/images/ro/garden-wide.jpg",
   cta: "Reserve your spot",
 };
