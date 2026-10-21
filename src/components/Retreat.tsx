@@ -12,7 +12,7 @@ export default function Retreat() {
     <section className="retreat" aria-labelledby="retreat-title">
       <div className="container retreat-inner">
         <div className="retreat-media reveal">
-          <Image src={retreat.image} alt="" fill sizes="(max-width: 860px) 100vw, 50vw" />
+          <Image src={retreat.image} alt={retreat.imageAlt} fill sizes="(max-width: 860px) 100vw, 520px" />
         </div>
         <div className="retreat-copy reveal">
           <span className="kicker">{retreat.kicker}</span>

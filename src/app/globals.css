@@ -514,9 +514,13 @@ p {
   gap: clamp(32px, 6vw, 96px);
   align-items: center;
 }
+/* Matches the 4:5 REST flyer so none of its text is cropped. */
 .retreat-media {
   position: relative;
-  aspect-ratio: 5 / 4;
+  width: 100%;
+  max-width: 520px;
+  aspect-ratio: 4 / 5;
+  justify-self: center;
   overflow: hidden;
   border-radius: 2px;
 }

@@ -123,6 +123,7 @@ export const retreat: {
   /** Selar checkout link. The Pay button only shows when this is set. */
   payLink: string;
   image: string;
+  imageAlt: string;
 } | null = {
   kicker: "Upcoming retreat",
   name: "REST",
@@ -134,7 +135,9 @@ export const retreat: {
   price: "₦350,000 per person (sharing)",
   spots: "Limited to 15–20 guests · Accommodation, meals, sessions & massage included",
   payLink: "https://selar.com/5650dc42m3",
-  image: "/images/ro/garden-wide.jpg",
+  image: "/images/ro/rest-flyer.jpg",
+  imageAlt:
+    "REST retreat flyer: December 11–13, 2026 at Greenhouse Resort, Abuja. Healthy meals, massage, accommodation, sound bath and aqua yoga. Investment ₦350,000.",
 };
 
 export const feature = {
