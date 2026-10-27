@@ -28,6 +28,8 @@ export const site = {
   country: "NG",
   instagram: "https://www.instagram.com/wellbeingwithro",
   instagramHandle: "@wellbeingwithro",
+  /** Official address of the live site (apex redirects to www on Vercel). */
+  domain: "https://www.wellbeingwithro.com",
 };
 
 export const nav = [
